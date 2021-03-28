@@ -2,10 +2,15 @@
 //  main.swift
 //  Calculator
 //
-//  Created by 강경훈 on 2021/03/28.
+//  Created by 강경 on 2021/03/28.
 //
 
 import Foundation
 
-print("Hello, World!")
+print("사용할 진법을 선택하세요...")
+print("1. Decimal")
+print("2. Binary")
+print(": ", terminator: "")
+let numeralSystem = Int(readLine()!)!
 
+Calculator().run(NumeralSystem(rawValue: numeralSystem)!)
