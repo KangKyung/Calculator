@@ -6,8 +6,8 @@
 //
 
 class Calculator {
-  private let firstOperands = Stack()
-  private let secondOperands = Stack()
+  private let firstOperands = Stack<Int>()
+  private let secondOperands = Stack<Int>()
 
   func run(_ numeralSystem: NumeralSystem) {
     var result: [Int] = []
@@ -103,6 +103,8 @@ class Calculator {
       return proceedOperation.LeftShift(firstOperands, secondOperands)
     case .RightShift:
       return proceedOperation.RightShift(firstOperands, secondOperands)
+    default:
+      return [0]
     }
   }
 }
