@@ -14,7 +14,7 @@ enum DecimalOperators: String, Comparable {
       return false
     }
   }
-  
+
   case Plus = "+"
   case Minus = "-"
   case Multiplication = "*"
