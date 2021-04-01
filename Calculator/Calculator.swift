@@ -44,7 +44,7 @@ class Calculator {
       }
     }
     
-    print(result)
+    print(result % 1000000000)
   }
   
   private func stackDecimalNumber(_ inputString: String) {
