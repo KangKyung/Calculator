@@ -5,37 +5,34 @@
 //  Created by 강경 on 2021/03/28.
 //
 
-class Stack {
-  private var array: [Int] = []
+class Stack<T> {
+  private var array: [T] = []
   
-  private func checkCount() throws {
-    if array.endIndex >= 10
-    || array.endIndex < 0 {
-      throw StackError.exceedRangeOfStack
-    }
-  }
-  
-  func peek() -> Int? {
-    if array.endIndex < 1 {
+  func peek() -> T? {
+    if array.isEmpty {
       return nil
     } else {
       return array[array.endIndex - 1]
     }
   }
   
-  func push(number: Int) throws {
-    try checkCount()
-    
-    array.append(number)
+  func push(_ element: T) {
+    array.append(element)
   }
   
-  func pop() throws {
-    try checkCount()
-    
+  func pop() { 
     array.removeLast()
   }
   
-  func Initialization() {
+  func popAllElements() {
     array.removeAll()
+  }
+  
+  func isEmpty() -> Bool {
+    if array.isEmpty {
+      return true
+    } else {
+      return false
+    }
   }
 }
